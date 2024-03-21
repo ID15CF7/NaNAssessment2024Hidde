@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Info over nextjs
+### Opstarten
 
-## Getting Started
-
-First, run the development server:
+Om de nextjs omgeving op te starten run je:
 
 ```bash
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) In je browser om het resultaat te zien.
+### Informatie
+Als je meer informatie wil zien over de API, zie: https://assessment.notanumber.digital/
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+In deze repo vind je alle pagina's in de map `/app`. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Compontenten die gebruik worden staan in de map `/components`. 
 
-## Learn More
+Er staan al 2 standaard pagina's klaar, een overzichtspagina met een tabel en een detail pagina met een formulier.
 
-To learn more about Next.js, take a look at the following resources:
+Wij gebruiken tailwind standaard als manier van stylen. Maar het is ook mogelijk om normaal scss te gebruiken, zie `MainLayout.js` en `MainLayout.module.scss` voor een voorbeeld
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Meer leren
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Om meer te leren over Next.js, bekijk de volgende bronnen:
 
-## Deploy on Vercel
+- [Next.js Documentatie](https://nextjs.org/docs) - leer over Next.js functies en API.
+- [Leer Next.js](https://nextjs.org/learn) - een interactieve Next.js tutorial.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Assessment:
+### Als Not a Number wil ik in een overzicht de belangrijkste gegevens van mijn producten kunnen zien.
+Acceptatie criteria:
+- Tabel met de volgende velden:
+    - Naam
+    - Kleur
+    - Prijs
+    - Omschrijving
+- Als je op een regel klikt moet hij naar het detail gaan.
+- Er moet gebruik worden gemaakt van de flowbite tabel: https://www.flowbite-react.com/docs/components/table
+- De gegevens van alle products kunnen worden opgehaald met een GET request naar https://assessment.notanumber.digital/api/products/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Als Not a number wil ik op een pagina alle details van een enkel product kunnen inzien.
+Acceptatie criteria:
+-  Elk product moet een eigen pagina hebben.
+-  Alle details van het product moeten inzichtelijk zijn
+-  De gegevens van een product kunnen worden opgehaald met een GET request naar https://assessment.notanumber.digital/api/products/{product_id} (voorbeeld: https://assessment.notanumber.digital/api/products/15)
+
+### Als Not a number wil ik de gegevens van een product kunnen bewerken
+Acceptatie criteria:
+- Alle velden moet te bewerken zijn in een formulier
+- Alle velden kan je inschieten door middel van een POST request naar https://assessment.notanumber.digital/api/products/{product_id}
+- De categorie moet een van de volgende waardes hebben: "Fiets", "Auto", "Motor", "Bus"
+- De body moet er hetzelfde uitzien als dat je van de GET request krijgt, dus:
+
+
