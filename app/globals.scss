@@ -23,3 +23,23 @@ h3 {
   font-size: 1rem;
   line-height: normal;
 }
+
+.btn-custom {
+  background-color: #0e7490; 
+  color: white; 
+  padding: 8px 16px;
+  border: 1px solid #0056b3; 
+  border-radius: 4px;
+  &:hover {
+    background-color: #0056b3; 
+  }
+  &:focus {
+    outline: none;
+    border-color: indigo;
+    box-shadow: 0 0 0 3px rgba(75, 0, 130, 0.5);
+  }
+}
+
+p {
+  margin-bottom: 1rem; 
+}

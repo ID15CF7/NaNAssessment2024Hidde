@@ -13,7 +13,7 @@ const MainLayout = ({ children }) => {
       >
         <Navbar.Brand
           as={Link}
-          href="https://notanumbre.digital"
+          href="https://notanumber.digital"
         >
           <Image
             width={128}
